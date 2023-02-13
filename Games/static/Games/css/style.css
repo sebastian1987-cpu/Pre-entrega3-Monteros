@@ -179,7 +179,7 @@ img {
 .lead {
 	font-size: 18px;
 	line-height: 30px;
-	color: #767676;
+	color: #b9b6b6;
 	margin: 0;
 	padding: 0;
 }
@@ -322,8 +322,8 @@ a.readmore_bt {
 
 .main_bt:hover,
 .main_bt:focus {
-	background: #ad2101;
-	border: solid #ad2101 5px;
+	background: #e4020d;
+	border: solid#e4020d 5px;
 	color: #fff;
 }
 
@@ -417,7 +417,7 @@ a.readmore_bt {
 }
 
 .top_awro {
-	background: #ee4a79 none repeat scroll 0 0;
+	background: #6bee4a none repeat scroll 0 0;
 	cursor: pointer;
 	padding: 6px 8px;
 	position: fixed;
@@ -433,7 +433,7 @@ a.readmore_bt {
 }
 
 .sale_pro {
-	background: #f25252 !important;
+	background: #ce0000 !important;
 }
 
 .margin_top_50 {

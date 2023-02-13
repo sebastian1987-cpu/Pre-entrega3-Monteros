@@ -23,6 +23,6 @@ class Inicio1(models.Model):
 
 class Contacto1(models.Model):
 
-    nombre = models.CharField(max_length=30)
-    email= models.CharField(max_length=40)
+    curso = models.CharField(max_length=30)
+    camada= models.CharField(max_length=40)
     

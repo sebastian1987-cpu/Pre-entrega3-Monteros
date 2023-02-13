@@ -1,23 +1,45 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from Games.models import *
-
-def games1(request):
-    Juegos = Games1(nombre = "Resident evil 4", plataforma="ps5", desarrolladora="Capcom", año= 2023)
-    Juegos.save()
-    
-    return HttpResponse(f"El proximo juego que se estrena el {Juegos.año} sera {Juegos.nombre} para la {Juegos.plataforma}")
-
-def noticias(request):
-
-    noti= News(titulo = "Nuevo remake de RE", fecha = 2023, genero = "survival horror")
-    noti.save()
-
-    return HttpResponse(f"Capcom tiene un {noti.titulo} que saldra {noti.fecha}, un ya conocido {noti.genero}")
-
+from Games.forms import CursoFormulario
 
 def Inicio(request):
     
     return render(request, "Games/inicio.html")
+
+def games1(request):
+
+    return render(request, "Games/games1.html")
+def noticias(request):
+
+    return render(request, "Games/noticias.html")
+
+def contacto(request):
+   
+    if request.method == "POST":
+        
+        contact = CursoFormulario
+        if contact.is_valid():
+            info = contact.cleaned_data
+            curso = Contacto1(nombre=info["curso"], camada=info["camada"])
+        
+        
+            curso.save()
+
+            return render(request, "Games/inicio.html")
+        
+    else:
+        contact = CursoFormulario()
+
+    return render(request, "Games/contacto.html", {"datos":contact})
+
+
+        
+
+
+   
+
+    
+
 
 # Create your views here.

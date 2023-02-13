@@ -1,0 +1,20 @@
+{% extends "games/padre.html" %} 
+
+{% load static %} 
+
+{% block titulo %} 
+
+{% endblock %} 
+
+<form action="" method="POST"> {% csrf_token %} 
+
+   <table>
+      {{datos.as_table}}
+
+   </table>
+
+   <input type="submit" value="enviar">
+
+
+</form>
+
