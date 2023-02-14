@@ -4,17 +4,24 @@
 
 {% block titulo %} 
 
-{% endblock %} 
 
 <form action="" method="POST"> {% csrf_token %} 
 
    <table>
+      
       {{datos.as_table}}
 
    </table>
+
+   <input type="user.name" value="usuario">
+
+   <input type="user.email" value="email">
 
    <input type="submit" value="enviar">
 
 
 </form>
+
+
+{% endblock %} 
 
